@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows 8
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Selenium WinJS GridApp", "Selenium WinJS GridApp\Selenium WinJS GridApp.jsproj", "{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|ARM.Build.0 = Debug|ARM
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|ARM.Deploy.0 = Debug|ARM
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|x64.ActiveCfg = Debug|x64
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|x64.Build.0 = Debug|x64
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|x64.Deploy.0 = Debug|x64
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|x86.ActiveCfg = Debug|x86
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|x86.Build.0 = Debug|x86
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Debug|x86.Deploy.0 = Debug|x86
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|ARM.ActiveCfg = Release|ARM
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|ARM.Build.0 = Release|ARM
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|ARM.Deploy.0 = Release|ARM
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|x64.ActiveCfg = Release|x64
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|x64.Build.0 = Release|x64
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|x64.Deploy.0 = Release|x64
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|x86.ActiveCfg = Release|x86
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|x86.Build.0 = Release|x86
+		{FDC00EFD-E0A3-48AA-8068-72ED3C6F9A3C}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
