@@ -61,6 +61,8 @@
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="js\selenium-commands.js" />
+    <Content Include="js\selenium-websocket.js" />
     <Content Include="js\sockjs-0.3.min.js" />
     <Content Include="packages.config" />
     <Content Include="pages\itemDetail\itemDetail.css" />

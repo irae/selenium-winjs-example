@@ -8,97 +8,21 @@
     <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
-    <script src="js/sockjs-0.3.min.js"></script>
 
     <!-- Selenium_WinJS_GridApp references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/data.js"></script>
     <script src="/js/navigator.js"></script>
     <script src="/js/default.js"></script>
+
+    <!-- our files -->
+    <script src="js/selenium-commands.js"></script>
+    <script src="js/selenium-websocket.js"></script>
 </head>
 <body>
     <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/groupedItems/groupedItems.html'}"></div>
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
     </div> -->
-
-    <script>
-        var sockjs;
-        // setTimeout(function () {
-        //     var sockjs_url = 'http://localhost:8080/browser_con';
-        //     sockjs = new SockJS(sockjs_url, null, {debug:true});
-        // 
-        //     sockjs.onopen = function () { console.log('[*] open', sockjs.protocol); };
-        //     sockjs.onmessage = function (e) { console.log('[.] message', e.data); };
-        //     sockjs.onclose = function () { console.log('[*] close'); };
-        // }, 2000);
-
-        var messageWebSocket = null;
-
-        function sendMessage(msg) {
-            messageWriter.writeString(msg);
-            messageWriter.storeAsync().done("", sendError);
-        }
-
-        function onMessageReceived(args) {
-            // The incoming message is already buffered.
-            var dataReader = args.getDataReader();
-            // Use the dataReader to read data from the received message
-            console.log(dataReader.readString(dataReader.unconsumedBufferLength));
-        }
-
-        function onClosed(args) {
-            // You can add code to log or display the code and reason
-            // for the closure (stored in args.code and args.reason)
-            if (messageWebSocket) {
-                messageWebSocket.close();
-            }
-            messageWebSocket = null;
-        }
-
-        function sendError() {
-            console.log('sendError', arguments);
-        }
-
-        function startSend() {
-            if (!messageWebSocket) {
-                var webSocket = new Windows.Networking.Sockets.MessageWebSocket();
-                // MessageWebSocket supports both utf8 and binary messages.
-                // When utf8 is specified as the messageType, then the developer
-                // promises to only send utf8-encoded data.
-                webSocket.control.messageType = Windows.Networking.Sockets.SocketMessageType.utf8;
-                // Set up callbacks
-                webSocket.onmessagereceived = onMessageReceived;
-                webSocket.onclosed = onClosed;
-
-                var serverAddress = new Windows.Foundation.Uri('ws://localhost:8080/browser_con/websocket');
-
-                try {
-                    webSocket.connectAsync(serverAddress).done(function () {
-                        messageWebSocket = webSocket;
-                        // The default DataWriter encoding is utf8.
-                        messageWriter = new Windows.Storage.Streams.DataWriter(webSocket.outputStream);
-                        messageWriter.writeString('start from winjs');
-                        messageWriter.storeAsync().done("", sendError);
-
-                    }, function (error) {
-                        // The connection failed; add your own code to log or display 
-                        // the error, or take a specific action.
-                    });
-                } catch (error) {
-                    // An error occurred while trying to connect; add your own code to  
-                    // log or display the error, or take a specific action.
-                }
-
-            }
-            else {
-                // The connection already exists; go ahead and send the message.
-                messageWriter.writeString('start from winjs existing connection');
-                messageWriter.storeAsync().done("", sendError);
-            }
-        }
-
-
-    </script>
 </body>
 </html>
